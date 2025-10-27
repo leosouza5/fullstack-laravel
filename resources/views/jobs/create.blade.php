@@ -33,11 +33,7 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
