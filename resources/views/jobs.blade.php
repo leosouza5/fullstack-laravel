@@ -4,8 +4,13 @@
     </x-slot:heading>
     <div class="space-y-4">
         @foreach($jobs as $job)
-                <a class="text-blue-500 hover:underline block px-4 py-6 shadow rounded border border-gray-200 " href="/jobs/{{$job['id']}}">
-                    {{$job['title']}} - {{$job['salary']}}
+                <a class=" block px-4 py-6 shadow rounded border border-gray-200 " href="/jobs/{{$job['id']}}">
+                   <div class="font-bold text-blue-500 hover:underline">
+                       {{$job->employer->name}}
+                   </div>
+                    <div>
+                       <strong>{{$job['title']}}</strong> - {{$job['salary']}}
+                   </div>
                 </a>
         @endforeach
     </div>
