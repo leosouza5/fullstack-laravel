@@ -8,7 +8,7 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <!--
@@ -29,8 +29,8 @@
   <body class="h-full">
   ```
 -->
-<div class="min-h-full">
-    <nav class="bg-gray-800">
+<div class="min-h-full ">
+    <nav class="bg-gray-800 shadow">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
@@ -153,7 +153,7 @@
         </div>
     </header>
     <main>
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 ">
            {{$slot}}
         </div>
     </main>

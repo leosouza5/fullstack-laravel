@@ -6,20 +6,36 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-     return view('home');
+    return view('home');
 });
 
 Route::get('/jobs', function () {
 
-    $jobs = Job::with('employer')->paginate(3);
-    return view('jobs',
+    $jobs = Job::with('employer')->latest()->paginate(3);
+    return view('jobs/index',
         ['jobs' => $jobs]);
 });
 
-Route::get('/jobs/{id}', function ($id) {
-    $selectedJob = Job::find($id);
-    return view('job', ['job' => $selectedJob]);
+Route::get('/jobs/create', function () {
+    return view('jobs/create');
 });
+
+Route::get('/jobs/{id}', function ($id) {
+    $selectedJob = Job::findOrFail($id);
+
+    return view('jobs/show', ['job' => $selectedJob]);
+});
+
+Route::post('/jobs', function () {
+    Job::create([
+        'title' => request()->title,
+        'salary' => request()->salary,
+        'employer_id' => 1
+    ]);
+
+    return redirect('/jobs');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });
