@@ -8,7 +8,6 @@ Este projeto foi desenvolvido com o objetivo de aprimorar conhecimentos em Larav
 composer install
 npm install
 cp .env.example .env
-php artisan key:generate
 php artisan migrate --seed
 php artisan serve
 npm run dev
@@ -35,7 +34,7 @@ http://localhost:8000
 
 - Laravel
 - PHP
-- MySQL
+- PostgreSQL
 - Blade Templates
 - Tailwind
 - Vite
@@ -57,7 +56,7 @@ http://localhost:8000
 
 - PHP 8+
 - Composer
-- MySQL
+- PostgreSQL
 - Node.js e NPM
 
 
